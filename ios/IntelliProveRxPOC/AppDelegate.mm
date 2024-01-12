@@ -1,6 +1,7 @@
 #import "AppDelegate.h"
 
 #import <React/RCTBundleURLProvider.h>
+#import <React/RCTBridge.h>
 
 @implementation AppDelegate
 
@@ -11,7 +12,11 @@
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
 
-  return [super application:application didFinishLaunchingWithOptions:launchOptions];
+  BOOL result = [super application:application didFinishLaunchingWithOptions:launchOptions];
+
+  [self registerWebViewModule];
+
+  return result;
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
@@ -26,6 +31,15 @@
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
+}
+
+- (void)registerWebViewModule
+{
+  RCTBridge *bridge = self.bridge;
+
+  if (bridge) {
+    [bridge moduleForName:@"WebViewModule"];
+  }
 }
 
 @end
