@@ -14,8 +14,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-IntelliProveRxPOC-IntelliProveRxPOCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-IntelliProveRxPOC-IntelliProveRxPOCTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		F01E49072B647F0C00E75E35 /* IntelliProveSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F01E49062B647F0C00E75E35 /* IntelliProveSDK.xcframework */; };
+		F01E49082B647F0C00E75E35 /* IntelliProveSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F01E49062B647F0C00E75E35 /* IntelliProveSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0596BB62B45BD0200B8C1DD /* WebViewModule.m in Sources */ = {isa = PBXBuildFile; fileRef = F0596BB52B45BD0200B8C1DD /* WebViewModule.m */; };
-		F0596BBA2B45BF6700B8C1DD /* IntelliWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0596BB92B45BF6700B8C1DD /* IntelliWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,20 @@
 			remoteInfo = IntelliProveRxPOC;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F01E49092B647F0D00E75E35 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F01E49082B647F0C00E75E35 /* IntelliProveSDK.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* IntelliProveRxPOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntelliProveRxPOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,10 +61,10 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = IntelliProveRxPOC/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-IntelliProveRxPOC-IntelliProveRxPOCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliProveRxPOC-IntelliProveRxPOCTests.release.xcconfig"; path = "Target Support Files/Pods-IntelliProveRxPOC-IntelliProveRxPOCTests/Pods-IntelliProveRxPOC-IntelliProveRxPOCTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F01E49062B647F0C00E75E35 /* IntelliProveSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = IntelliProveSDK.xcframework; path = Frameworks/IntelliProveSDK.xcframework; sourceTree = "<group>"; };
 		F0596BB52B45BD0200B8C1DD /* WebViewModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewModule.m; sourceTree = "<group>"; };
 		F0596BB72B45BD3300B8C1DD /* WebViewModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewModule.h; sourceTree = "<group>"; };
 		F0596BB82B45BF6700B8C1DD /* IntelliProveRxPOC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IntelliProveRxPOC-Bridging-Header.h"; sourceTree = "<group>"; };
-		F0596BB92B45BF6700B8C1DD /* IntelliWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntelliWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-IntelliProveRxPOC.a in Frameworks */,
+				F01E49072B647F0C00E75E35 /* IntelliProveSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +116,6 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				F0596BB52B45BD0200B8C1DD /* WebViewModule.m */,
 				F0596BB72B45BD3300B8C1DD /* WebViewModule.h */,
-				F0596BB92B45BF6700B8C1DD /* IntelliWebView.swift */,
 				F0596BB82B45BF6700B8C1DD /* IntelliProveRxPOC-Bridging-Header.h */,
 			);
 			name = IntelliProveRxPOC;
@@ -109,6 +124,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F01E49062B647F0C00E75E35 /* IntelliProveSDK.xcframework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-IntelliProveRxPOC.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-IntelliProveRxPOC-IntelliProveRxPOCTests.a */,
@@ -193,6 +209,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				F01E49092B647F0D00E75E35 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -403,7 +420,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0596BB62B45BD0200B8C1DD /* WebViewModule.m in Sources */,
-				F0596BBA2B45BF6700B8C1DD /* IntelliWebView.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -424,7 +440,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-IntelliProveRxPOC-IntelliProveRxPOCTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -452,7 +467,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-IntelliProveRxPOC-IntelliProveRxPOCTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = IntelliProveRxPOCTests/Info.plist;

@@ -7,6 +7,7 @@
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
+import { useEffect } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -17,6 +18,7 @@ import {
   View,
   Button,
   NativeModules,
+  NativeEventEmitter,
 } from 'react-native';
 
 import {
@@ -64,6 +66,25 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  // Add Event Listener for IntelliWebViewPostMessage API
+  useEffect(() => {
+    // Subscribe to the event when the component mounts
+    const eventEmitter = new NativeEventEmitter(NativeModules.WebViewModule);
+    const subscription = eventEmitter.addListener('IntelliWebViewPostMessage', (postMessage) => {
+      // Handle the received postMessage
+      if (postMessage && postMessage.stage) {
+      console.log('ReactNative PostMessage Stage:', postMessage.stage);
+      }
+      console.log('ReactNative PostMessage Full Body:', postMessage);
+    });
+
+    // Unsubscribe from the event when the component unmounts
+    return () => {
+      subscription.remove();
+    };
+  }, []); // Empty dependency array means this effect runs once when the component mounts
+
+  // Add Callback to NativeModules for presenting the IntelliWebView
   const handleOpenWebView = () => {
     NativeModules.WebViewModule.presentWebView('https://plugin-dev.intelliprove.com/?action_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoiIiwiY3VzdG9tZXIiOiJOZWJ1bGFlIHRlc3RpbmciLCJncm91cCI6ImFkbWluIiwibWF4X21lYXN1cmVtZW50X2NvdW50IjoxMDAwfSwibWV0YSI6e30sImV4cCI6MTcxNTA3NDIyMn0.kQvGQD_8wFzmLjgFMuft_i3nWjAxSKWx5oI_FBFEYXI');
   };
