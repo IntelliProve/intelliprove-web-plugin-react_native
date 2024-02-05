@@ -277,7 +277,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 @import WebKit;
@@ -331,7 +330,10 @@ SWIFT_CLASS("_TtC15IntelliProveSDK24IntelliWebViewController")
 
 SWIFT_PROTOCOL("_TtP15IntelliProveSDK22IntelliWebViewDelegate_")
 @protocol IntelliWebViewDelegate
-- (void)didReceiveWithPostMessage:(NSDictionary<NSString *, id> * _Nonnull)postMessage;
+/// This method gets triggered when a postMessage was received from the WebView.
+/// \param postMessage The body of the postMessage as a JSON String
+///
+- (void)didReceiveWithPostMessage:(NSString * _Nonnull)postMessage;
 @end
 
 
@@ -628,7 +630,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 @import WebKit;
@@ -682,7 +683,10 @@ SWIFT_CLASS("_TtC15IntelliProveSDK24IntelliWebViewController")
 
 SWIFT_PROTOCOL("_TtP15IntelliProveSDK22IntelliWebViewDelegate_")
 @protocol IntelliWebViewDelegate
-- (void)didReceiveWithPostMessage:(NSDictionary<NSString *, id> * _Nonnull)postMessage;
+/// This method gets triggered when a postMessage was received from the WebView.
+/// \param postMessage The body of the postMessage as a JSON String
+///
+- (void)didReceiveWithPostMessage:(NSString * _Nonnull)postMessage;
 @end
 
 

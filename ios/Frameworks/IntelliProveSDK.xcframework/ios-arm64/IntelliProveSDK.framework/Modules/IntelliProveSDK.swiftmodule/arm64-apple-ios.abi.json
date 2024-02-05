@@ -380,32 +380,20 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Any]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "Any"
-                  }
-                ],
-                "usr": "s:SD"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Func",
             "usr": "c:@M@IntelliProveSDK@objc(pl)IntelliWebViewDelegate(im)didReceiveWithPostMessage:",
-            "mangledName": "$s15IntelliProveSDK0A15WebViewDelegateP10didReceive11postMessageySDySSypG_tF",
+            "mangledName": "$s15IntelliProveSDK0A15WebViewDelegateP10didReceive11postMessageySS_tF",
             "moduleName": "IntelliProveSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : IntelliProveSDK.IntelliWebViewDelegate>",
             "sugared_genericSig": "<Self where Self : IntelliProveSDK.IntelliWebViewDelegate>",
             "protocolReq": true,
             "declAttributes": [
+              "RawDocComment",
               "ObjC"
             ],
             "reqNewWitnessTableEntry": true,
@@ -784,126 +772,126 @@
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 747,
+      "offset": 917,
       "length": 32,
       "value": "\"IntelliProvePostMessageHandler\""
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1020,
+      "offset": 1190,
       "length": 39,
       "value": "\"init(coder:) has not been implemented\""
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "Array",
-      "offset": 1459,
+      "offset": 1629,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1512,
+      "offset": 1682,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 1650,
+      "offset": 1820,
       "length": 244,
       "value": "\"var meta = document.createElement('meta');\nmeta.name = 'viewport';\nmeta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';\nvar head = document.getElementsByTagName('head')[0];\nhead.appendChild(meta);\""
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2049,
+      "offset": 2219,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2298,
-      "length": 137,
-      "value": "\"window.postMessage = function(data) {\n    window.webkit.messageHandlers.\""
+      "offset": 2468,
+      "length": 185,
+      "value": "\"window.postMessage = function(data) {\n    var jsonString = JSON.stringify(data)\n    window.webkit.messageHandlers.\""
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 2409,
+      "offset": 2621,
       "length": 1,
-      "value": "\".postMessage(data);\n};\""
+      "value": "\".postMessage(jsonString);\n};\""
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2590,
+      "offset": 2808,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2928,
+      "offset": 3146,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3136,
+      "offset": 3354,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3200,
+      "offset": 3418,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3266,
+      "offset": 3484,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3420,
+      "offset": 3638,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 629,
+      "offset": 799,
       "length": 24,
       "value": "\"IntelliProveSDK.IntelliWebViewController\""
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6004,
+      "offset": 6222,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7721,
+      "offset": 7932,
       "length": 38,
       "value": "\"Received postMessage: \""
     },
     {
       "filePath": "\/Users\/dries.vanmeert\/git_private\/IntelliProve POC\/IntelliProveSDK\/IntelliWebViewController.swift",
       "kind": "StringLiteral",
-      "offset": 7758,
+      "offset": 7969,
       "length": 2,
       "value": "\"\""
     }

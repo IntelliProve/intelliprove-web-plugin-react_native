@@ -27,7 +27,7 @@ public struct IntelliWebView : SwiftUI.UIViewControllerRepresentable {
   @objc deinit
 }
 @objc public protocol IntelliWebViewDelegate {
-  @objc func didReceive(postMessage: [Swift.String : Any])
+  @objc func didReceive(postMessage: Swift.String)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class IntelliWebViewController : UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()

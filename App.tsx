@@ -68,14 +68,23 @@ function App(): React.JSX.Element {
 
   // Add Event Listener for IntelliWebViewPostMessage API
   useEffect(() => {
-    // Subscribe to the event when the component mounts
+    // Subscribe to the event when the App component mounts
     const eventEmitter = new NativeEventEmitter(NativeModules.WebViewModule);
     const subscription = eventEmitter.addListener('IntelliWebViewPostMessage', (postMessage) => {
       // Handle the received postMessage
-      if (postMessage && postMessage.stage) {
-      console.log('ReactNative PostMessage Stage:', postMessage.stage);
-      }
       console.log('ReactNative PostMessage Full Body:', postMessage);
+
+      try {
+        // The PostMessage is received as a JSON String, so we need to parse it
+        const parsedMessage = JSON.parse(postMessage);
+        if (parsedMessage && parsedMessage.stage) {
+          console.log('ReactNative PostMessage Stage:', parsedMessage.stage);
+        } else {
+          console.warn('ReactNative invalid PostMessage format:', parsedMessage);
+        }
+      } catch (error) {
+        console.error('ReactNative error parsing PostMessage:', error);
+      }
     });
 
     // Unsubscribe from the event when the component unmounts

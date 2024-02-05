@@ -33,7 +33,7 @@ RCT_EXPORT_METHOD(presentWebView:(NSString *)urlString) {
   });
 }
 
-- (void)didReceiveWithPostMessage:(NSDictionary<NSString *,id> *)postMessage {
+- (void)didReceiveWithPostMessage:(NSString *)postMessage {
   // Pass message to React App through an event
   [self sendEventWithName:postMessageEvent body:postMessage];
 }
